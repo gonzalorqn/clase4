@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include "funciones.h"
+
+int pedirEntero(char mensaje[], int min, int max)
+{
+    int numero;
+    printf("%s", mensaje);
+    scanf("%d", &numero);
+    while(numero<min || numero>max)
+    {
+        printf("Error! %s", mensaje);
+        scanf("%d", &numero);
+    }
+
+    return numero;
+}
